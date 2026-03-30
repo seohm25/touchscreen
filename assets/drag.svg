@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239 58">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1542ff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="M26,0c-2.15,0-4.18,1-6,2.79-1.82-1.79-3.85-2.79-6-2.79C6.27,0,0,12.98,0,29s6.27,29,14,29c2.15,0,4.18-1,6-2.79,1.82,1.79,3.85,2.79,6,2.79,7.73,0,14-12.98,14-29S33.73,0,26,0Z"/>
+      <ellipse class="cls-1" cx="60" cy="29" rx="14" ry="29"/>
+      <ellipse class="cls-1" cx="94" cy="29" rx="14" ry="29"/>
+      <ellipse class="cls-1" cx="144" cy="29" rx="14" ry="29"/>
+      <ellipse class="cls-1" cx="225" cy="29" rx="14" ry="29"/>
+    </g>
+  </g>
+</svg>
