@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "PP Editorial New";
+    src: url(PPEditorialNew-Regular.otf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative; /* 절대 위치를 사용하려면 부모가 relative여야 함 */
+    width: 100vw;
+    height: 100vh;
+    font-family: 'PP Editorial New', 'Editorial New', sans-serif;
+    color: black;
+  }
+  
+  .drag {
+    position: absolute;
+    font-size: 48px;
+    font-weight: 400;
+    left: 22px;
+    top: 15px;
+    word-wrap: break-word;
+    font-family: 'PP Editorial New', 'Editorial New', sans-serif;
+  }
+  
+  .swipe {
+    position: absolute;
+    left: 109px;
+    top: 130px;
+    width: 133px;
+    height: 41px;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: 'PP Editorial New', 'Editorial New', sans-serif;
+  }
+  
+  .flick {
+    position: absolute;
+    left: 23px;
+    top: 254px;
+    width: 135px;
+    height: 30px;
+    font-size: 48px;
+    font-weight: 400;
+  }
+
+.drag-ellipse-01 {
+    position: absolute;
+    width: 28px;
+    height: 58px;
+    top: 20px;
+    left: 125px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%; /* This creates the ellipse shape */
+  }
+.drag-ellipse-02 {
+    position: absolute;
+    width: 28px;
+    height: 58px;
+    top: 20px;
+    left: 137px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+.drag-ellipse-03 {
+    position: absolute;
+    width: 28px;
+    height: 58px;
+    top: 20px;
+    left: 171px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+.drag-ellipse-04 {
+    position: absolute;
+    width: 28px;
+    height: 58px;
+    top: 20px;
+    left: 205px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.drag-ellipse-05 {
+    position: absolute;
+    width: 28px;
+    height: 58px;
+    top: 20px;
+    left: 255px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.drag-ellipse-05 {
+    position: absolute;
+    width: 28px;
+    height: 58px;
+    top: 20px;
+    left: 300px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.swipe-ellipse-01 {
+    position: absolute;
+    width: 154px;
+    height: 25px;
+    top: 130px;
+    left: 38px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.swipe-ellipse-02 {
+    position: absolute;
+    width: 154px;
+    height: 25px;
+    top: 130px;
+    left: 160px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.swipe-ellipse-03 {
+    position: absolute;
+    width: 154px;
+    height: 25px;
+    top: 130px;
+    left: 248px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
