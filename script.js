@@ -37,7 +37,7 @@ function preload() {
 }
 
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(1000, 2000);
   cnv.position(0, 0);
   cnv.style('z-index', '10');
   cnv.style('pointer-events', 'auto');
