@@ -6,8 +6,21 @@ let isMoving = false;
 let lastShapePos;
 let lastShapeTime = 0;
 
-// PNG 파일
+// 이미지
 let images = {};
+
+// 👉 제스처별 사이즈 규칙
+let shapeSettings = {
+  drag: { w: 100, h: 10 },        // 세로 길게
+  swipe: { w: 90, h: 20 },        // 가로 느낌
+  flick: { w: 90, h: 90 },         // compact
+  nudge: { w: 80, h: 80 },         // 거의 점
+  pinch: { w: 80, h: 80 },
+  spread: { w: 140, h: 140 },
+  single_tap: { w: 40, h: 40 },
+  double_tap: { w: 30, h: 30 },
+  short_hold: { w: 70, h: 70 }
+};
 
 function preload() {
   images = {
@@ -24,7 +37,7 @@ function preload() {
 }
 
 function setup() {
-  let cnv = createCanvas(3000, 2000);
+  let cnv = createCanvas(windowWidth, windowHeight);
   cnv.position(0, 0);
   cnv.style('z-index', '10');
   cnv.style('pointer-events', 'auto');
@@ -37,9 +50,13 @@ function draw() {
   for (let s of shapes) {
     if (s.type in images) {
       let img = images[s.type];
-      image(img, s.x - s.size / 2, s.y - s.size / 2, s.size, s.size);
+      let setting = shapeSettings[s.type];
+
+      let w = setting.w;
+      let h = setting.h;
+
+      image(img, s.x - w / 2, s.y - h / 2, w, h);
     } else {
-      // 디버깅용
       console.log("missing image:", s.type);
     }
   }
@@ -65,27 +82,23 @@ function touchMoved() {
 
   if (distSinceLast > 20 || now - lastShapeTime > 50) {
 
-    // Drag / Slide
     if (abs(dx) > 5 || abs(dy) > 5) {
-      shapes.push({ type: "drag", x: mouseX, y: mouseY, size: 60 });
+      shapes.push({ type: "drag", x: mouseX, y: mouseY });
     }
 
-    // Swipe
     if (abs(dx) > 20 || abs(dy) > 20) {
-      shapes.push({ type: "swipe", x: mouseX, y: mouseY, size: 60 });
+      shapes.push({ type: "swipe", x: mouseX, y: mouseY });
     }
 
-    // Flick (빠른 움직임)
     if ((abs(dx) > 50 || abs(dy) > 50) && dt < 150) {
-      shapes.push({ type: "flick", x: mouseX, y: mouseY, size: 80 });
+      shapes.push({ type: "flick", x: mouseX, y: mouseY });
     }
 
-    // Nudge (미세 움직임)
     if (abs(dx) < 10 && abs(dy) < 10) {
-      shapes.push({ type: "nudge", x: mouseX, y: mouseY, size: 40 });
+      shapes.push({ type: "nudge", x: mouseX, y: mouseY });
     }
 
-    // Pinch / Spread
+    // pinch / spread
     if (touches.length == 2) {
       let d = dist(
         touches[0].x, touches[0].y,
@@ -96,19 +109,9 @@ function touchMoved() {
       let centerY = (touches[0].y + touches[1].y) / 2;
 
       if (d > 150) {
-        shapes.push({
-          type: "spread",
-          x: centerX,
-          y: centerY,
-          size: map(d, 150, 300, 60, 120)
-        });
+        shapes.push({ type: "spread", x: centerX, y: centerY });
       } else {
-        shapes.push({
-          type: "pinch",
-          x: centerX,
-          y: centerY,
-          size: map(d, 0, 150, 40, 80)
-        });
+        shapes.push({ type: "pinch", x: centerX, y: centerY });
       }
     }
 
@@ -121,43 +124,38 @@ function touchEnded() {
   let duration = millis() - touchStartTime;
   let now = millis();
 
-  // Tap & Hold (롱프레스)
+  // 롱프레스
   if (duration > 600 && !isMoving) {
     shapes.push({
       type: "double_tap",
       x: mouseX,
-      y: mouseY,
-      size: 60
+      y: mouseY
     });
     return;
   }
 
-  // Short Hold
+  // short hold
   if (duration > 200 && duration < 600 && !isMoving) {
     shapes.push({
       type: "short_hold",
       x: mouseX,
-      y: mouseY,
-      size: 50
+      y: mouseY
     });
     return;
   }
 
-  // Double Tap
+  // double tap
   if (now - lastTapTime < 300) {
     shapes.push({
       type: "double_tap",
       x: mouseX,
-      y: mouseY,
-      size: 60
+      y: mouseY
     });
   } else {
-    // Single Tap
     shapes.push({
       type: "single_tap",
       x: mouseX,
-      y: mouseY,
-      size: 50
+      y: mouseY
     });
   }
 
