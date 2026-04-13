@@ -37,11 +37,16 @@ function preload() {
 }
 
 function setup() {
-  let cnv = createCanvas(1000, 2000);
+  let cnv = createCanvas(window.innerWidth, window.innerHeight); // 👉 viewport 기준
   cnv.position(0, 0);
   cnv.style('z-index', '10');
   cnv.style('pointer-events', 'auto');
   clear();
+}
+
+// 👉 화면 크기 바뀌면 다시 맞춤
+function windowResized() {
+  resizeCanvas(window.innerWidth, window.innerHeight);
 }
 
 function draw() {
