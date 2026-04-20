@@ -16,13 +16,13 @@
 body {
     margin: 0;
     padding: 0;
-    width: 393px;    
+    width: 360px;    
     height: 1000px;    /* 👉 iPhone 17 고정 */
     position: relative; /* 절대 위치를 사용하려면 부모가 relative여야 함 */
     /* width: 100vw; */
     /* height: 100vh; */
     font-family: 'PP Editorial New', 'Editorial New', sans-serif;
-    color: black;
+    color:  rgb(255, 228, 250);
   }
   
   .drag {
@@ -124,7 +124,7 @@ body {
     height: 58px;
     top: 20px;
     left: 125px;
-    background-color: rgb(0, 0, 0);
+    background-color:  rgb(255, 228, 250);
     border-radius: 50%; /* This creates the ellipse shape */
   }
 .drag-ellipse-02 {
@@ -133,7 +133,7 @@ body {
     height: 58px;
     top: 20px;
     left: 137px;
-    background-color: rgb(0, 0, 0);
+    background-color:  rgb(255, 228, 250);
     border-radius: 50%;
 }
 .drag-ellipse-03 {
@@ -142,7 +142,7 @@ body {
     height: 58px;
     top: 20px;
     left: 171px;
-    background-color: rgb(0, 0, 0);
+    background-color:  rgb(255, 228, 250);
     border-radius: 50%;
 }
 .drag-ellipse-04 {
@@ -151,7 +151,7 @@ body {
     height: 58px;
     top: 20px;
     left: 205px;
-    background-color: rgb(0, 0, 0);
+    background-color:  rgb(255, 228, 250);
     border-radius: 50%;
 }
 
@@ -161,7 +161,7 @@ body {
     height: 58px;
     top: 20px;
     left: 255px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 228, 250);
     border-radius: 50%;
 }
 
@@ -171,7 +171,7 @@ body {
     height: 58px;
     top: 20px;
     left: 300px;
-    background-color: rgb(0, 0, 0);
+    background-color:   rgb(255, 228, 250);
     border-radius: 50%;
 }
 
@@ -181,7 +181,7 @@ body {
     height: 25px;
     top: 130px;
     left: 38px;
-    background-color: rgb(0, 0, 0);
+    background-color:   rgb(255, 228, 250);
     border-radius: 50%;
 }
 
@@ -191,7 +191,7 @@ body {
     height: 25px;
     top: 130px;
     left: 160px;
-    background-color: rgb(0, 0, 0);
+    background-color:  rgb(255, 228, 250);
     border-radius: 50%;
 }
 
@@ -201,7 +201,7 @@ body {
     height: 25px;
     top: 130px;
     left: 248px;
-    background-color: rgb(0, 0, 0);
+    background-color:   rgb(255, 228, 250);
     border-radius: 50%;
 }
 
@@ -212,7 +212,7 @@ body {
   height: 7px;
   top: 278px;
   left: 57px;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 .flick-ellipse-02 {
@@ -221,7 +221,7 @@ body {
   height: 7px;
   top: 248px;
   left: 129px;
-  background-color: rgb(0, 0, 0);
+  background-color:   rgb(255, 228, 250);
   border-radius: 50%;
 }
 .flick-ellipse-03 {
@@ -230,7 +230,7 @@ body {
   height: 7px;
   top: 270px;
   left: 191px;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 .flick-ellipse-04 {
@@ -239,7 +239,7 @@ body {
   height: 7px;
   top: 263px;
   left: 237px;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 .flick-ellipse-05 {
@@ -248,7 +248,7 @@ body {
   height: 7px;
   top: 248px;
   left: 319px;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -258,7 +258,7 @@ body {
   height: 13px;
   top: 379px;
   left: 19px;
-  background-color: rgb(0, 0, 0);
+  background-color:   rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -268,7 +268,7 @@ body {
   height: 13px;
   top: 364px;
   left: 87px;
-  background-color: rgb(0, 0, 0);
+  background-color:   rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -278,7 +278,7 @@ body {
   height: 13px;
   top: 340px;
   left: 159px;
-  background-color: rgb(0, 0, 0);
+  background-color:   rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -288,7 +288,7 @@ body {
   height: 13px;
   top: 326px;
   left: 199px;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -299,7 +299,7 @@ body {
   top: 407px;
   left: 139px;
   rotate: 54deg;
-  background-color: rgb(0, 0, 0);
+  background-color:   rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -310,7 +310,7 @@ body {
   top: 420px;
   left: 144px;
   rotate: 54deg;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -321,7 +321,7 @@ body {
   top: 520px;
   left: 89px;
   rotate: -42deg;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -332,7 +332,7 @@ body {
   top: 480px;
   left: 162px;
   rotate: -42deg;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -342,7 +342,7 @@ body {
   height: 24px;
   top: 609px;
   left: 259px;
-  background-color: rgb(0, 0, 0);
+  background-color:   rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -352,7 +352,7 @@ body {
   height: 31px;
   top: 687px;
   left: 342px;
-  background-color: rgb(0, 0, 0);
+  background-color:    rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -362,7 +362,7 @@ body {
   height: 31px;
   top: 703px;
   left: 358px;
-  background-color: rgb(0, 0, 0);
+  background-color:    rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -372,7 +372,7 @@ body {
   height: 124px;
   top: 771px;
   left: 23px;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
 
@@ -382,6 +382,6 @@ body {
   height: 124px;
   top: 786px;
   left: 63px;
-  background-color: rgb(0, 0, 0);
+  background-color:  rgb(255, 228, 250);
   border-radius: 50%;
 }
