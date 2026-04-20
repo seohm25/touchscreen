@@ -3,12 +3,24 @@
     src: url(PPEditorialNew-Regular.otf);
 }
 
+#bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 393px;
+  height: 852px;
+  z-index: 1;         /* 👉 캔버스(10) 아래 */
+  pointer-events: none; /* 👉 터치 이벤트는 캔버스가 받음 */
+}
+
 body {
     margin: 0;
     padding: 0;
+    width: 393px;    
+    height: 1000px;    /* 👉 iPhone 17 고정 */
     position: relative; /* 절대 위치를 사용하려면 부모가 relative여야 함 */
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    /* height: 100vh; */
     font-family: 'PP Editorial New', 'Editorial New', sans-serif;
     color: black;
   }
